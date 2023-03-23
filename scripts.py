@@ -28,8 +28,8 @@ def reservation_script1():
     #wait until shibboleth page loads
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "ssousername")))
     #enter username and password
-    driver.find_element(By.ID, "ssousername").send_keys("vpabba")
-    driver.find_element(By.XPATH, "//*[@id='ssopassword']").send_keys("Wagonwheel@080103")
+    driver.find_element(By.ID, "ssousername").send_keys("username")
+    driver.find_element(By.XPATH, "//*[@id='ssopassword']").send_keys("password")
     driver.find_element(By.NAME, "_eventId_proceed").click()
     #send duo push notification
     WebDriverWait(driver, 20).until(EC.frame_to_be_available_and_switch_to_it((By.XPATH, "//iframe[@id='duo_iframe']")))
